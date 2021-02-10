@@ -4,4 +4,5 @@ run main.py
 
 info :
 tested on linux mint cinameon
+
 size and other pair of number need to seperated with a 'x'
