@@ -1,9 +1,14 @@
 # mandelbrot-set-image-creator
-Create images of the mandelbrot set :
-run main.py
+Python program that creates images of the mandelbrot set :
+
+to start it lunch main.py
+
+requirements : 
+
+tkinter and pilow library
 
 info :
 
 tested on linux mint cinameon
 
-size and other pair of number need to seperated with a 'x'
+size and other pair of numbers need to seperated with an 'x'
