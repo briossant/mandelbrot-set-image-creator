@@ -32,9 +32,9 @@ def px_calculator(l=400, h=400, name='img', is_save=True, inter=None, max_iterat
             c = complex(inter['re_start'] + (x / l) * (inter['re_end'] - inter['re_start']),
                         inter['im_start'] + (y / h) * (inter['im_end'] - inter['im_start']))
             m = mandelbrot_fct(c, max_iteration)
-            r = int((colors[0] * (m / max_iteration)) % 255)
-            g = int((colors[1] * (m / max_iteration)) % 255)
-            b = int((colors[2] * (m / max_iteration)) % 255)
+            r = int((colors[0] * (m / 255)) % 255)
+            g = int((colors[1] * (m / 255)) % 255)
+            b = int((colors[2] * (m / 255)) % 255)
             img.putpixel((x + l // 2, y + h // 2), (r, g, b))
 
     if is_save:

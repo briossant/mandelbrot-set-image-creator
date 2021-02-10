@@ -40,13 +40,13 @@ class Application(tk.Frame):
         self.re_label = tk.Label(self.master, text='real start x end :', font=self.Arial14, pady=10)
         self.re_label.grid(row=3, column=0, sticky=tk.W)
         self.re_entry = tk.Entry(self.master, width=25)
-        self.re_entry.insert(tk.END, '0.36x0.37')
+        self.re_entry.insert(tk.END, '0.360240x0.360244')
         self.re_entry.grid(row=3, column=1, columnspan=25, sticky=tk.W)
 
         self.im_label = tk.Label(self.master, text='imaginary start x end :', font=self.Arial14, pady=10)
         self.im_label.grid(row=4, column=0, sticky=tk.W)
         self.im_entry = tk.Entry(self.master, width=25)
-        self.im_entry.insert(tk.END, '-0.63x-0.64')
+        self.im_entry.insert(tk.END, '-0.641313x-0.641309')
         self.im_entry.grid(row=4, column=1, columnspan=25, sticky=tk.W)
 
         # Colors
