@@ -14,3 +14,7 @@ tkinter and pilow library
 tested on linux mint cinameon
 
 size and other pair of numbers need to seperated with an 'x'
+
+ +example :
+
+![example](example.jpg)
