@@ -39,6 +39,6 @@ def px_calculator(l=400, h=400, name='img', is_save=True, inter=None):
 
     img.show()
     if is_save:
-        name = "/home/bcr/PycharmProjects/mandelbrot/images/" + name + ".jpg"
+        name = "./images/" + name + ".jpg"
         img.save(name)
         os.system("xdg-open " + name)
