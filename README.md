@@ -3,11 +3,13 @@ Python program that creates images of the mandelbrot set :
 
 to start it lunch main.py
 
-requirements : 
+
+ + requirements : 
 
 tkinter and pilow library
 
-info :
+
+ + info :
 
 tested on linux mint cinameon
 
