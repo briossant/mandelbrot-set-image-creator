@@ -27,8 +27,7 @@ def px_calculator(l=400, h=400, name='img', is_save=True, inter=None, max_iterat
     print('start')
     img = Image.new('RGB', (l, h))
     for x in range(-l // 2, l // 2):
-        print("Progress :" + str(round((x + l // 2) * l / (l * h) * 100, 3)) + "%")
-        print(end="\r", flush=True)
+        print("\rProgress :" + str(round((x + l // 2) * l / (l * h) * 100, 3)) + "%", end="")
         for y in range(-h // 2, h // 2):
             c = complex(inter['re_start'] + (x / l) * (inter['re_end'] - inter['re_start']),
                         inter['im_start'] + (y / h) * (inter['im_end'] - inter['im_start']))
@@ -43,6 +42,5 @@ def px_calculator(l=400, h=400, name='img', is_save=True, inter=None, max_iterat
         img.save(name)
         os.system("xdg-open " + name)
     else:
-        print(colors)
         img.show()
 
