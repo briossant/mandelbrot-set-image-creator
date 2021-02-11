@@ -19,6 +19,7 @@ class Application(tk.Frame):
         self.Arial14 = tkFont.Font(family='arial', size=14)
 
         # entry
+
         self.size_label = tk.Label(self.master, text='Image size length x height :', font=self.Arial14, pady=10)
         self.size_label.grid(row=0, column=0, sticky=tk.W)
         self.size_entry = tk.Entry(self.master, width=25)
@@ -51,32 +52,33 @@ class Application(tk.Frame):
 
         # Colors
 
-        self.red_label = tk.Label(self.master, text='red :', font=self.Arial14, pady=10)
-        self.red_label.grid(row=0, column=16, sticky=tk.E)
-        self.red = tk.Scale(self.master, from_=0, to=255, orient='horizontal')
-        self.red.set(255)
-        self.red.grid(row=0, column=17, sticky=tk.E)
+        self.color_label = tk.Label(self.master, text='coloration :', font=self.Arial14, pady=10)
+        self.color_label.grid(row=1, column=16, sticky=tk.E)
+        self.color = tk.Scale(self.master, from_=0, to=255, orient='horizontal')
+        self.color.set(255)
+        self.color.grid(row=1, column=17, sticky=tk.E)
 
-        self.green_label = tk.Label(self.master, text='green :', font=self.Arial14, pady=10)
-        self.green_label.grid(row=1, column=16, sticky=tk.E)
-        self.green = tk.Scale(self.master, from_=0, to=255, orient='horizontal')
-        self.green.set(0)
-        self.green.grid(row=1, column=17, sticky=tk.E)
+        self.color_range_label = tk.Label(self.master, text='color range :', font=self.Arial14, pady=10)
+        self.color_range_label.grid(row=0, column=16, sticky=tk.E)
+        self.color_range = tk.Entry(self.master, width=12)
+        self.color_range.insert(tk.END, '1')
+        self.color_range.grid(row=0, column=17, sticky=tk.E)
 
-        self.blue_label = tk.Label(self.master, text='blue :', font=self.Arial14, pady=10)
-        self.blue_label.grid(row=2, column=16, sticky=tk.E)
-        self.blue = tk.Scale(self.master, from_=0, to=255, orient='horizontal')
-        self.blue.set(255)
-        self.blue.grid(row=2, column=17, sticky=tk.E)
+        self.sat_label = tk.Label(self.master, text='saturation :', font=self.Arial14, pady=10)
+        self.sat_label.grid(row=2, column=16, sticky=tk.E)
+        self.sat = tk.Scale(self.master, from_=0, to=255, orient='horizontal')
+        self.sat.set(255)
+        self.sat.grid(row=2, column=17, sticky=tk.E)
 
         # save check
 
         self.check_var = tk.IntVar()
         self.save_check = tk.Checkbutton(self.master, text='Save image ?', variable=self.check_var, onvalue=1,
                                          offvalue=0)
-        self.save_check.grid(row=3, column=17, pady=10)
+        self.save_check.grid(row=3, column=16, pady=10)
 
         # Buttons
+
         self.create_btn = tk.Button(self.master, text="Create image", width=12, command=self.create_img)
         self.create_btn.grid(row=5, column=1, pady=10)
 
@@ -97,9 +99,9 @@ class Application(tk.Frame):
                 'im_end': float(im[1])
             }
 
-            colors = [int(self.red.get()),
-                      int(self.green.get()),
-                      int(self.blue.get())]
+            colors = [int(self.color.get()),
+                      int(self.color_range.get()),
+                      int(self.sat.get())]
 
             functions.px_calculator(l=int(L), h=int(H), name=name, is_save=self.check_var.get(), inter=inter,
                                     max_iteration=max_iter, colors=colors)
