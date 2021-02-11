@@ -15,6 +15,8 @@ tested on linux mint cinameon
 
 size and other pair of numbers need to seperated with an 'x'
 
+color range can't be = 0
+
 if you choose a small interval, put a large number to max_iterations
 
  + example :

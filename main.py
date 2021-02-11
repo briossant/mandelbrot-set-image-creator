@@ -61,7 +61,7 @@ class Application(tk.Frame):
         self.color_range_label = tk.Label(self.master, text='color range :', font=self.Arial14, pady=10)
         self.color_range_label.grid(row=0, column=16, sticky=tk.E)
         self.color_range = tk.Entry(self.master, width=12)
-        self.color_range.insert(tk.END, '1')
+        self.color_range.insert(tk.END, '3')
         self.color_range.grid(row=0, column=17, sticky=tk.E)
 
         self.sat_label = tk.Label(self.master, text='saturation :', font=self.Arial14, pady=10)
