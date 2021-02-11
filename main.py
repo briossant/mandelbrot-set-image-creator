@@ -34,7 +34,7 @@ class Application(tk.Frame):
         self.iter_label = tk.Label(self.master, text='max iterations :', font=self.Arial14, pady=10)
         self.iter_label.grid(row=2, column=0, sticky=tk.W)
         self.iter_entry = tk.Entry(self.master, width=25)
-        self.iter_entry.insert(tk.END, '80')
+        self.iter_entry.insert(tk.END, '500')
         self.iter_entry.grid(row=2, column=1, columnspan=15, sticky=tk.W)
 
         self.re_label = tk.Label(self.master, text='real start x end :', font=self.Arial14, pady=10)
