@@ -2,10 +2,10 @@ from PIL import Image, ImageDraw
 import os
 
 default_inter = {
-    're_start': -0.5,
-    're_end': 0,
+    're_start': 0,
+    're_zoom': 1,
     'im_start': 0,
-    'im_end': 0.5
+    'im_zoom': 1
 }
 
 
@@ -31,8 +31,8 @@ def px_calculator(l=400, h=400, name='img', is_save=True, inter=None, max_iterat
     for x in range(-l // 2, l // 2):
         print("\rProgress :" + str(round((x + l // 2) * l / (l * h) * 100, 3)) + "%", end="")
         for y in range(-h // 2, h // 2):
-            c = complex(inter['re_start'] + (x / l) * (inter['re_end'] - inter['re_start']),
-                        inter['im_start'] + (y / h) * (inter['im_end'] - inter['im_start']))
+            c = complex(inter['re_start'] + (x / l) / inter['re_zoom'],
+                        inter['im_start'] + (y / h) / inter['im_zoom'])
             m = mandelbrot_fct(c, max_iteration)
             hue = int(255 * m / (max_iteration / colors[1]) + colors[0]) % 255
             saturation = colors[2]

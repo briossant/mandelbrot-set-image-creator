@@ -1,23 +1,23 @@
 # mandelbrot-set-image-creator
-Python program that creates images of the mandelbrot set :
+Python programs that creates images of the mandelbrot set :
 
 to start it lunch main.py
 
 
  + requirements : 
 
-tkinter and pilow library
+tkinter and pillow library
 
 
  + info :
 
-tested on linux mint cinameon
+tested on linux mint cinnamon
 
-size and other pair of numbers need to seperated with an 'x'
+size need to separated with an 'x'
 
-color range can't be = 0
+color range and zoom can't be = 0
 
-if you choose a small interval, put a large number to max_iterations
+if you choose a big zoom, put a large number to max_iterations
 
  + example :
 
