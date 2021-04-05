@@ -1,4 +1,7 @@
 # mandelbrot-set-image-creator
+
+/!\ New web version faster and better at https://briossant.com/Maths/Fractal/Mandelbrot/ /!\
+
 Python programs that creates images of the mandelbrot set :
 
 to start it lunch main.py
